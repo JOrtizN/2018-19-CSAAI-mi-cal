@@ -1,0 +1,12 @@
+h1{
+  background-color: Red;
+}
+p{
+  background-color: Blue;
+  background-position: center;
+}
+
+.Teclas{
+  background-color: grey;
+  background-size: 30px;
+}

@@ -23,54 +23,82 @@ function main()
   reset = document.getElementById('tR')
   display = document.getElementById('Display')
   guard = document.getElementById('G')
-
   teclaON.onclick = function(){
-    console.log('Van Click')
+    console.log('Van Click', G)
     display.innerHTML = '0'
+    G = 0;
     tecla0.onclick = () => {
       console.log('Cero on Click')
-      display.innerHTML += '0';}
+      display.innerHTML += '0';
+      guard.innerHTML += '0';
+      G += '0'}
     tecla1.onclick = () => {
-      console.log('Uno on Click')
-      display.innerHTML += '1';}
+      console.log('Uno on Click', G)
+      display.innerHTML += '1';
+      guard.innerHTML += '1'
+      G += '1'}
     tecla2.onclick = () => {
-      console.log('Dos on Click')
-      display.innerHTML += '2';}
+      console.log('Dos on Click', G)
+      display.innerHTML += '2';
+      guard.innerHTML += '2'
+      G += '2'}
     tecla3.onclick = () => {
       console.log('Tres on Click')
-      display.innerHTML += '3';}
+      display.innerHTML += '3';
+      guard.innerHTML += '3'
+      G += '3'}
     tecla4.onclick = () => {
       console.log('Cuatro on Click')
-      display.innerHTML += '4';}
+      display.innerHTML += '4';
+      guard.innerHTML += '4'
+      G += '4'}
     tecla5.onclick = () => {
       console.log('Cinco on Click')
-      display.innerHTML += '5';}
+      display.innerHTML += '5';
+      guard.innerHTML += '5'
+      G += '5'}
     tecla6.onclick = () => {
       console.log('Seis on Click')
-      display.innerHTML += '6';}
+      display.innerHTML += '6';
+      guard.innerHTML += '6'
+      G += '6'}
     tecla7.onclick = () => {
       console.log('Siete on Click')
-      display.innerHTML += '7';}
+      display.innerHTML += '7';
+      guard.innerHTML += '7'
+      G += '7'}
     tecla8.onclick = () => {
       console.log('Ocho on Click')
-      display.innerHTML += '8';}
+      display.innerHTML += '8';
+      guard.innerHTML += '8'
+      G += '8'}
     tecla9.onclick = () => {
       console.log('Nueve on Click')
-      display.innerHTML += '9';}
+      display.innerHTML += '9';
+      guard.innerHTML += '9'
+      G += '9'}
     teclamas.onclick = () => {
       console.log('Suma on Click')
-      sumando1 = display;
-      console.log(sumando1)
+      display.innerHTML = '0';
+      guard.innerHTML += '+';
+      G += '+';
       }
     teclamenos.onclick = () => console.log('Resta on Click')
     teclapor.onclick = () => console.log('Multiplicacion on Click')
     teclaentre.onclick = () => console.log('Division on Click')
     teclacent.onclick = () => console.log('Porcentaje on Click')
     exp.onclick = () => console.log('Exponencial Click')
-    sol.onclick = () => console.log('Resultado Click')
+    sol.onclick = () => {
+      console.log('Resultado Click')
+      sumando1 = parseInt(G.split('+')[0]);
+      sumando2 = parseInt(G.split('+')[1]);
+      var R = (sumando1 + sumando2);
+      display.innerHTML = '0';
+      console.log(R);}
     reset.onclick = () => {
       console.log('Reset Click')
-      display.innerHTML = '0'}
+      display.innerHTML = '0'
+      guard.innerHTML = '0'}
     del.onclick = () => console.log('Borrar Click')
   }
 }

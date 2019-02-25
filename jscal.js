@@ -26,17 +26,17 @@ function main()
   teclaON.onclick = function(){
     console.log('Van Click', G)
     display.innerHTML = '0'
-    G = 0;
+    G = [];
     tecla0.onclick = () => {
       console.log('Cero on Click')
       display.innerHTML += '0';
       G += '0'}
     tecla1.onclick = () => {
-      console.log('Uno on Click', G)
+      console.log('Uno on Click')
       display.innerHTML += '1';
       G += '1'}
     tecla2.onclick = () => {
-      console.log('Dos on Click', G)
+      console.log('Dos on Click')
       display.innerHTML += '2';
       G += '2'}
     tecla3.onclick = () => {
@@ -127,12 +127,16 @@ function main()
         console.log('NO SUM NI REST NIMULT NI DIV', G);
       }
       display.innerHTML = G;
-      G = '0'
+      G = [];
       console.log('FIN.');}
     reset.onclick = () => {
       console.log('Reset Click')
       display.innerHTML = '0'
       guard.innerHTML = 'Aquí aparecerá su resultado'}
-    del.onclick = () => console.log('Borrar Click')
+    del.onclick = () => {
+      console.log('Borrar Click')
+      var borrado = ['cac','cul','ped','pis'];
+      var julia = borrado.pop()
+      console.log(borrado);}
   }
 }

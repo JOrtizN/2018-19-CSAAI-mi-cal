@@ -19,7 +19,6 @@ function main()
   teclacent = document.getElementById('t%')
   exp = document.getElementById('tE')
   sol = document.getElementById('tS')
-  del = document.getElementById('tD')
   reset = document.getElementById('tR')
   display = document.getElementById('Display')
   guard = document.getElementById('G')
@@ -133,10 +132,5 @@ function main()
       console.log('Reset Click')
       display.innerHTML = '0'
       guard.innerHTML = 'Aquí aparecerá su resultado'}
-    del.onclick = () => {
-      console.log('Borrar Click')
-      var borrado = ['cac','cul','ped','pis'];
-      var julia = borrado.pop()
-      console.log(borrado);}
   }
 }
